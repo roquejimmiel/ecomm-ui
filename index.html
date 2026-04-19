@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MAISON — Curated Objects</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo">Maison</a>
+  <nav>
+    <a href="#">New Arrivals</a>
+    <a href="#">Collections</a>
+    <a href="#">Objects</a>
+    <a href="#">Textiles</a>
+    <a href="#">About</a>
+  </nav>
+  <div class="header-actions">
+    <button class="icon-btn" aria-label="Search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+    </button>
+    <button class="icon-btn" aria-label="Account">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    </button>
+    <button class="icon-btn" aria-label="Cart" onclick="toggleCart()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-count">2</span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Autumn / Winter Collection</p>
+    <h1 class="hero-title">Objects of<br><em>Quiet Beauty</em></h1>
+    <p class="hero-desc">Thoughtfully curated pieces for the considered home. Each object is chosen for its integrity of craft and the quiet pleasure it brings to everyday living.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="#" class="btn-primary">
+        Explore Collection
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a href="#" class="btn-ghost">View Lookbook</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img class="hero-img" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80" alt="Featured collection" />
+    <div class="hero-tag">
+      <p class="hero-tag-label">Featured Object</p>
+      <p class="hero-tag-price">Linen Throw — ₱4,800</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot">●</span> Free shipping over ₱3,000</span>
+    <span class="marquee-item"><span class="marquee-dot">●</span> Handcrafted & curated objects</span>
+    <span class="marquee-item"><span class="marquee-dot">●</span> New arrivals every Thursday</span>
+    <span class="marquee-item"><span class="marquee-dot">●</span> Sustainable materials</span>
+    <span class="marquee-item"><span class="marquee-dot">●</span> Easy 30-day returns</span>
+    <span class="marquee-item"><span class="marquee-dot">●</span> Free shipping over ₱3,000</span>
+    <span class="marquee-item"><span class="marquee-dot">●</span> Handcrafted & curated objects</span>
+    <span class="marquee-item"><span class="marquee-dot">●</span> New arrivals every Thursday</span>
+    <span class="marquee-item"><span class="marquee-dot">●</span> Sustainable materials</span>
+    <span class="marquee-item"><span class="marquee-dot">●</span> Easy 30-day returns</span>
+  </div>
+</div>
+
+<!-- NEW ARRIVALS -->
+<section class="section">
+  <div class="section-header">
+    <div>
+      <p class="section-label">Just In</p>
+      <h2 class="section-title">New Arrivals</h2>
+    </div>
+    <a href="#" class="btn-ghost">View All</a>
+  </div>
+  <div class="product-grid">
+
+    <div class="product-card fade-up">
+      <div class="product-img-wrap">
+        <img class="product-img" src="https://images.unsplash.com/photo-1549497538-303791108f95?w=600&q=80" alt="Ceramic Vase" />
+        <span class="product-badge">New</span>
+        <div class="product-actions">
+          <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+          <button class="wishlist-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="product-category">Ceramics</p>
+      <h3 class="product-name">Wabi-Sabi Vase No. 3</h3>
+      <div class="product-price"><span class="price-current">₱2,400</span></div>
+    </div>
+
+    <div class="product-card fade-up" style="transition-delay:0.1s">
+      <div class="product-img-wrap">
+        <img class="product-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Linen Pillow" />
+        <span class="product-badge sale">Sale</span>
+        <div class="product-actions">
+          <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+          <button class="wishlist-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="product-category">Textiles</p>
+      <h3 class="product-name">Stone Linen Pillowcase</h3>
+      <div class="product-price"><span class="price-current">₱1,800</span><span class="price-old">₱2,400</span></div>
+    </div>
+
+    <div class="product-card fade-up" style="transition-delay:0.2s">
+      <div class="product-img-wrap">
+        <img class="product-img" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Wooden Bowl" />
+        <div class="product-actions">
+          <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+          <button class="wishlist-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="product-category">Objects</p>
+      <h3 class="product-name">Turned Oak Bowl</h3>
+      <div class="product-price"><span class="price-current">₱3,600</span></div>
+    </div>
+
+    <div class="product-card fade-up" style="transition-delay:0.3s">
+      <div class="product-img-wrap">
+        <img class="product-img" src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=600&q=80" alt="Candle" />
+        <span class="product-badge">New</span>
+        <div class="product-actions">
+          <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+          <button class="wishlist-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="product-category">Fragrance</p>
+      <h3 class="product-name">Cedar & Smoke Candle</h3>
+      <div class="product-price"><span class="price-current">₱1,200</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURED BANNER -->
+<div class="featured fade-up">
+  <div class="featured-content">
+    <p class="featured-eyebrow">The Autumn Edit</p>
+    <h2 class="featured-title">A Season of <em>Warmth</em> & Texture</h2>
+    <p class="featured-desc">Discover our curated selection of woven throws, earthenware vessels, and objects that bring warmth to the changing season.</p>
+    <a href="#" class="btn-ghost" style="color:var(--cream);border-color:rgba(245,240,232,0.4)">Shop the Edit →</a>
+  </div>
+  <img class="featured-img" src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=900&q=80" alt="Autumn collection" />
+</div>
+
+<!-- CATEGORIES -->
+<section class="section">
+  <div class="section-header">
+    <div>
+      <p class="section-label">Explore</p>
+      <h2 class="section-title">Shop by Category</h2>
+    </div>
+  </div>
+  <div class="categories-grid">
+    <div class="cat-card">
+      <img class="cat-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=80" alt="Furniture" />
+      <div class="cat-label">
+        <p class="cat-label-sub">04 Objects</p>
+        <p class="cat-label-name">Furniture</p>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img class="cat-img" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" alt="Ceramics" />
+      <div class="cat-label">
+        <p class="cat-label-sub">12 Objects</p>
+        <p class="cat-label-name">Ceramics</p>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img class="cat-img" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="Textiles" />
+      <div class="cat-label">
+        <p class="cat-label-sub">08 Objects</p>
+        <p class="cat-label-name">Textiles</p>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img class="cat-img" src="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?w=600&q=80" alt="Lighting" />
+      <div class="cat-label">
+        <p class="cat-label-sub">06 Objects</p>
+        <p class="cat-label-name">Lighting</p>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img class="cat-img" src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w=600&q=80" alt="Fragrance" />
+      <div class="cat-label">
+        <p class="cat-label-sub">09 Objects</p>
+        <p class="cat-label-name">Fragrance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials fade-up">
+  <p class="section-label" style="text-align:center;margin-bottom:12px">What Our Customers Say</p>
+  <h2 class="section-title" style="text-align:center">Trusted by Those Who<br><em style="font-style:italic;color:var(--gold)">Care About Home</em></h2>
+  <div style="height:64px"></div>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Every piece I've ordered from Maison has been exceptional. The linen throw is softer than anything I've owned — it lives on my sofa and I never want to put it away.</p>
+      <p class="testimonial-author">Isabel Cruz</p>
+      <p class="testimonial-role">Interior Designer, Manila</p>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">The ceramic vase arrived beautifully packaged and is exactly as described. The imperfections in the glaze make it feel genuinely handmade — which it is.</p>
+      <p class="testimonial-author">Marco Reyes</p>
+      <p class="testimonial-role">Architect, BGC</p>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">I've been shopping here for two years and the curation only gets better. Maison understands that good objects are not about price — they're about intention and craft.</p>
+      <p class="testimonial-author">Sari Mendoza</p>
+      <p class="testimonial-role">Stylist & Creative Director</p>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<section class="newsletter fade-up">
+  <div class="newsletter-text">
+    <p class="section-label">Stay Connected</p>
+    <h2 class="newsletter-title">Stories, Arrivals & Rare Finds</h2>
+    <p class="newsletter-desc">A thoughtful letter in your inbox — new objects, the makers behind them, and how to live beautifully with less.</p>
+  </div>
+  <div>
+    <div class="newsletter-form">
+      <div class="input-group">
+        <input class="email-input" type="email" placeholder="Your email address" />
+        <button class="newsletter-submit">Subscribe</button>
+      </div>
+      <p class="newsletter-note">No spam, ever. Unsubscribe at any time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo">Maison</a>
+      <p>Curated objects for the considered home. Quality over quantity, always.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Furniture</a></li>
+        <li><a href="#">Ceramics</a></li>
+        <li><a href="#">Textiles</a></li>
+        <li><a href="#">Fragrance</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">Size Guide</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Track Order</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">The Makers</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Maison. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">IG</a>
+      <a href="#">PI</a>
+      <a href="#">TK</a>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h2 class="cart-title">Your Cart (2)</h2>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-body">
+    <div class="cart-item">
+      <div class="cart-item-img" style="background:#e8e2d8;display:flex;align-items:center;justify-content:center">
+        <img src="https://images.unsplash.com/photo-1549497538-303791108f95?w=200&q=80" style="width:100%;height:100%;object-fit:cover" alt="Vase"/>
+      </div>
+      <div>
+        <p class="cart-item-name">Wabi-Sabi Vase No. 3</p>
+        <p class="cart-item-variant">Matte Ivory</p>
+        <div class="cart-qty">
+          <button class="qty-btn">−</button>
+          <span>1</span>
+          <button class="qty-btn">+</button>
+        </div>
+      </div>
+      <p class="cart-item-price">₱2,400</p>
+    </div>
+    <div class="cart-item">
+      <div class="cart-item-img">
+        <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=200&q=80" style="width:100%;height:100%;object-fit:cover" alt="Candle"/>
+      </div>
+      <div>
+        <p class="cart-item-name">Cedar & Smoke Candle</p>
+        <p class="cart-item-variant">250ml</p>
+        <div class="cart-qty">
+          <button class="qty-btn">−</button>
+          <span>1</span>
+          <button class="qty-btn">+</button>
+        </div>
+      </div>
+      <p class="cart-item-price">₱1,200</p>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span class="cart-total-label">Subtotal</span>
+      <span class="cart-total-price">₱3,600</span>
+    </div>
+    <button class="btn-primary" style="width:100%;justify-content:center;margin-bottom:12px">Proceed to Checkout</button>
+    <button class="btn-ghost" style="width:100%;justify-content:center" onclick="toggleCart()">Continue Shopping</button>
+  </div>
+</div>
+
+</body>
+</html>
